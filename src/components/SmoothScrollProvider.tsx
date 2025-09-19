@@ -9,6 +9,7 @@ const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ children })
   const lenisRef = useRef<Lenis | null>(null);
 
   useEffect(() => {
+    // Initialize Lenis
     lenisRef.current = new Lenis({
       duration: 1.2,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -20,12 +21,14 @@ const SmoothScrollProvider: React.FC<SmoothScrollProviderProps> = ({ children })
       infinite: false,
     });
 
+    // Animation frame loop
     const raf = (time: number) => {
       lenisRef.current?.raf(time);
       requestAnimationFrame(raf);
     };
     requestAnimationFrame(raf);
 
+    // Cleanup
     return () => {
       lenisRef.current?.destroy();
     };
