@@ -310,7 +310,7 @@ const QRGenerator: React.FC = () => {
           </h1>
         </div>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-          Fast, modern, and privacy-focused QR code generation. All processing happens locally in your browser.
+          Fast, modern and privacy-focused QR code generation. <br /> All processing happens locally in your browser.
         </p>
       </div>
 
