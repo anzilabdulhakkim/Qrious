@@ -47,7 +47,7 @@ const QRLoading: React.FC = () => {
         <div className="absolute inset-0 rounded-lg border-2 border-primary/30 animate-[pulse_3s_ease-in-out_infinite]" />
 
         {/* Loading text */}
-        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-sm text-muted-foreground tracking-wide animate-fade-in">
+        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-sm text-muted-foreground tracking-wide animate-fade-in whitespace-nowrap">
           Generating QR...
         </div>
       </div>
